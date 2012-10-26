@@ -22,8 +22,6 @@ alias lla='ls -laFG'
 alias lal='ls -laFG'
 
 
-export PATH=$PATH:/Users/jhl/java/maven2/bin:/Users/jhl/java/scala/bin:/Users/jhl/bin/wireshark
-
 export CVS_RSH=ssh
 export EDITOR=/usr/bin/vim
 
