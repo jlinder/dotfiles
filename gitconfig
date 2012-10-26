@@ -1,6 +1,9 @@
 [user]
-	name = James H. Linder
-	email = james@jlinder.com
+    name = James H. Linder
+    email = james@jlinder.com
+[core]
+    autocrlf = false
+    excludesfile = ~/.gitignore_global
 [alias]
     lg = log --graph --pretty=format:'%Cred%h %d%Creset %s %Cblue(%ar by %an)'
     ll = log --name-status --color --graph
