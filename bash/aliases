@@ -1,0 +1,20 @@
+# Bash
+if [[ "Darwin" == `uname` ]] ; then
+    alias ls='ls -FG'
+else
+    alias ls='ls -F --color=auto'
+fi
+
+alias ll='ls -l'
+alias la='ls -a'
+alias lla='ls -la'
+alias lal='ls -la'
+
+alias grep='grep --color=auto'
+alias egrep='egrep --color=auto'
+alias fgrep='fgrep --color=auto'
+
+# Ruby
+alias uni='RAILS_ENV=development unicorn -c config/unicorn.rb'
+alias r="time bundle exec rake"
+alias fspec="time bundle exec rspec"
