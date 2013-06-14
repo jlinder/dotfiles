@@ -7,3 +7,6 @@ PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 # Python Things
 source /usr/local/share/python/virtualenvwrapper.sh
 
+# Java Things
+export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.7.0_21.jdk/Contents/Home/
+
