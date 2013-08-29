@@ -1,0 +1,12 @@
+
+# Most-used commands in history
+hits() { history | perl -F"\||<\(|;|\`|\\$\(" -alne 'foreach (@F) { print $1 if /\b((?!do)[a-z]+)\b/i }' | sort | uniq -c | sort -nr | head; }
+
+hits() { history | sed -E -e 's/^ *[0-9]*  .{13}//' -e 's/^([^ ]*) .*/\1/' | sort | uniq -c | sort -nr | head; }
+
+# Longest command in history
+longest() { history | perl -lane '$lsize{$_} = scalar(@F); if($longest<$lsize{$_}) { $longest = $lsize{$_}; print "$_"; };' | tail -n1; }
+
+# Animals
+animal() { curl -s http://animals.ivolo.me/?index=$1; }
+
