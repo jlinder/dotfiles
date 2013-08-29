@@ -18,3 +18,8 @@ alias fgrep='fgrep --color=auto'
 alias uni='RAILS_ENV=development unicorn -c config/unicorn.rb'
 alias r="time bundle exec rake"
 alias fspec="time bundle exec rspec"
+
+# Start/Stop postgres
+alias start_postgres='launchctl load -w ~/Library/LaunchAgents/homebrew.mxcl.postgresql.plist'
+alias stop_postgres='launchctl unload -w ~/Library/LaunchAgents/homebrew.mxcl.postgresql.plist'
+
