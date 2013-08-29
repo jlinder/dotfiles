@@ -10,3 +10,5 @@ source /usr/local/share/python/virtualenvwrapper.sh
 # Java Things
 export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.7.0_21.jdk/Contents/Home/
 
+# NPM Things
+PATH=$PATH:/usr/local/share/npm/bin
