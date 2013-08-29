@@ -5,11 +5,16 @@
     autocrlf = false
     excludesfile = ~/.gitignore_global
 [alias]
+    b = branch
+    ba = branch -a
+    branches = branch -a
+    c = commit -v
+    co = checkout
+    heads = show-ref --heads
     lg = log --graph --pretty=format:'%Cred%h %d%Creset %s %Cblue(%ar by %an)'
     ll = log --name-status --color --graph
-    branches = branch -a
-    heads = show-ref --heads
-    tags = show-ref --tags
-    pll = pull --rebase
     pff = pull --ff-only
-    co = checkout
+    pll = pull --rebase
+    remotes = remote -v
+    s = status
+    tags = show-ref --tags
