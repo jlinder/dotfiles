@@ -11,7 +11,8 @@ set hlsearch                    " Highlight search
 set incsearch                   " Show the `best match so far' during search
 set laststatus=2
 set list                        " Show invisible chars
-set listchars=tab:»·,trail:·    " Show tabs and trailing whitespace only
+"set listchars=tab:»·,trail:·    " Show tabs and trailing whitespace only
+set listchars=tab:>-,trail:~           " Show tabs and trailing whitespace only
 set noai                        " No autoindent
 set nocompatible                " Use Vim defaults (not compatible w/ vi)
 set number                      " Display line numbers
