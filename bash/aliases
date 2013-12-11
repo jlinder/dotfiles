@@ -23,3 +23,6 @@ alias fspec="time bundle exec rspec"
 alias start_postgres='launchctl load -w ~/Library/LaunchAgents/homebrew.mxcl.postgresql.plist'
 alias stop_postgres='launchctl unload -w ~/Library/LaunchAgents/homebrew.mxcl.postgresql.plist'
 
+# Git
+alias gitclean="if [ 'master' = `git branch | grep '^* ' | sed -e 's/^[*] //'` ] ; then git branch --merged | grep -v \"\*\" | xargs git branch -d ; fi"
+
