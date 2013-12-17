@@ -6,6 +6,7 @@
     excludesfile = ~/.gitignore_global
 [alias]
     a = add
+    ap = add -p                        # pick lines to add
     b = branch
     ba = branch -a
     branches = branch -a
@@ -19,6 +20,7 @@
     pff = pull --ff-only
     pll = pull --rebase
     remotes = remote -v
+    rollback = reset --hard HEAD~1     # erase last commit and related file edits (destructive!)
     s = status
     tags = show-ref --tags
-    undo = reset --soft HEAD^
+    uncommit = reset --soft HEAD^      # erase last commit but keeps related file edits
