@@ -26,3 +26,12 @@ alias stop_postgres='launchctl unload -w ~/Library/LaunchAgents/homebrew.mxcl.po
 # Git
 alias gitclean="if [ 'master' = `git branch | grep '^* ' | sed -e 's/^[*] //'` ] ; then git branch --merged | grep -v \"\*\" | xargs git branch -d ; fi"
 
+# Deploy notification commands
+alias notif_rendering_dev="curl -d '{ \"color\": \"red\", \"notify\": true, \"message\": \"quilltech-rendering-dev deployed\" }' \"https://api.hipchat.com/v2/room/HIPCHAT_NOTIFICATIONS_ROOM/message?auth_token=${HIPCHAT_API_ACCESS_TOKEN}\""
+alias notif_rendering_staging="curl -d '{ \"color\": \"red\", \"notify\": true, \"message\": \"quilltech-rendering-staging deployed\" }' \"https://api.hipchat.com/v2/room/HIPCHAT_NOTIFICATIONS_ROOM/message?auth_token=${HIPCHAT_API_ACCESS_TOKEN}\""
+alias notif_rendering_sandbox="curl -d '{ \"color\": \"red\", \"notify\": true, \"message\": \"quilltech-rendering-sandbox deployed\" }' \"https://api.hipchat.com/v2/room/HIPCHAT_NOTIFICATIONS_ROOM/message?auth_token=${HIPCHAT_API_ACCESS_TOKEN}\""
+alias notif_rendering_production="curl -d '{ \"color\": \"red\", \"notify\": true, \"message\": \"quilltech-rendering-production deployed\" }' \"https://api.hipchat.com/v2/room/HIPCHAT_NOTIFICATIONS_ROOM/message?auth_token=${HIPCHAT_API_ACCESS_TOKEN}\""
+alias notif_qt_api_dev="curl -d '{ \"color\": \"red\", \"notify\": true, \"message\": \"quilltech-quilltech-api-dev deployed\" }' \"https://api.hipchat.com/v2/room/HIPCHAT_NOTIFICATIONS_ROOM/message?auth_token=${HIPCHAT_API_ACCESS_TOKEN}\""
+alias notif_qt_api_staging="curl -d '{ \"color\": \"red\", \"notify\": true, \"message\": \"quilltech-quilltech-api-staging deployed\" }' \"https://api.hipchat.com/v2/room/HIPCHAT_NOTIFICATIONS_ROOM/message?auth_token=${HIPCHAT_API_ACCESS_TOKEN}\""
+alias notif_qt_api_sandbox="curl -d '{ \"color\": \"red\", \"notify\": true, \"message\": \"quilltech-quilltech-api-sandbox deployed\" }' \"https://api.hipchat.com/v2/room/HIPCHAT_NOTIFICATIONS_ROOM/message?auth_token=${HIPCHAT_API_ACCESS_TOKEN}\""
+alias notif_qt_api_production="curl -d '{ \"color\": \"red\", \"notify\": true, \"message\": \"quilltech-quilltech-api-production deployed\" }' \"https://api.hipchat.com/v2/room/HIPCHAT_NOTIFICATIONS_ROOM/message?auth_token=${HIPCHAT_API_ACCESS_TOKEN}\""
