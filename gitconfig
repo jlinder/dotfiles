@@ -4,6 +4,8 @@
 [core]
     autocrlf = false
     excludesfile = ~/.gitignore_global
+[color]
+    ui = true
 [alias]
     a = add
     ap = add -p                        # pick lines to add
