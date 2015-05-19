@@ -39,3 +39,4 @@ export HISTFILESIZE=10000      # save this many commands to the history file
 
 #export HISTIGNORE=" *:&:ls" # Set which commands are appended to the history file.
 
+export EDITOR=/usr/bin/vim
