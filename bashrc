@@ -6,6 +6,3 @@ fi
 . ~/bin/dotfiles/bash/config
 . ~/bin/dotfiles/bash/aliases
 . ~/bin/dotfiles/bash/functions
-
-### Added by the Heroku Toolbelt
-export PATH="/usr/local/heroku/bin:$PATH"
