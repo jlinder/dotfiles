@@ -1,4 +1,7 @@
 
+# Search dash from the command line. https://kapeli.com/dash
+dash() { open dash://$1; }
+
 # Most-used commands in history
 hits() { history | perl -F"\||<\(|;|\`|\\$\(" -alne 'foreach (@F) { print $1 if /\b((?!do)[a-z]+)\b/i }' | sort | uniq -c | sort -nr | head; }
 
@@ -14,3 +17,4 @@ animal() { curl -s http://animals.ivolo.me/?index=$1; }
 function gitcleanremote {
   for x in `git branch -r --merged | grep origin | grep -v '>' | grep -v master  | xargs -L1 | awk '{split($0,a,"/"); print a[2]}'` ; do git push origin :$x ; done
 }
+
