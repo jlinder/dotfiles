@@ -11,6 +11,7 @@
     ap = add -p                        # pick lines to add
     b = branch
     ba = branch -a
+    bt = branch --track
     branches = branch -a
     c = commit -v
     co = checkout
