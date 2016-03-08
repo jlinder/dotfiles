@@ -1,6 +1,6 @@
 [user]
     name = James H. Linder
-    email = james@jlinder.com
+    email = git@jlinder.com
 [core]
     autocrlf = false
     excludesfile = ~/.gitignore_global
