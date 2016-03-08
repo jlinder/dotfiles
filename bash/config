@@ -28,6 +28,7 @@ xterm*|rxvt*)
     ;;
 esac
 
+export PROMPT_COMMAND="history -a; $PROMPT_COMMAND"
 
 shopt -s extglob      # Setting extended pattern matching.
 shopt -s checkwinsize # check the window size after each command and, if necessary, update the values of LINES and COLUMNS.
@@ -35,7 +36,7 @@ shopt -s histappend   # append to history, don't overwrite it
 
 
 export HISTTIMEFORMAT='%F %T ' # Set the history time format
-export HISTCONTROL=ignorespace # don't put duplicate successive lines in the history. See bash(1) for more options
+export HISTCONTROL=ignoreboth # don't put duplicate successive lines nor lines starting with a space in the history. See bash(1) for more options
 export HISTSIZE=100000         # save this many commands to the history file
 export HISTFILESIZE=100000     # save this many commands to the history file
 
