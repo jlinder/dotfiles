@@ -33,6 +33,3 @@ alias stop_postgres='launchctl unload -w ~/Library/LaunchAgents/homebrew.mxcl.po
 alias d-c='docker-compose'
 alias dm='docker-machine'
 
-# Git
-alias gitclean="if [ 'master' = `git branch | grep '^* ' | sed -e 's/^[*] //'` ] ; then git branch --merged | grep -v \"\*\" | xargs git branch -d ; fi"
-
