@@ -2,6 +2,11 @@
 # Search dash from the command line. https://kapeli.com/dash
 dash() { open dash://$1; }
 
+# Encode a key/value pair for inclusion in a URL
+urlencode() {
+    python -c "import urllib; print(urllib.urlencode({'$1': '$2'}))"
+}
+
 # Most-used commands in history
 hits() { history | perl -F"\||<\(|;|\`|\\$\(" -alne 'foreach (@F) { print $1 if /\b((?!do)[a-z]+)\b/i }' | sort | uniq -c | sort -nr | head; }
 
