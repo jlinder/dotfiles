@@ -14,9 +14,11 @@
     bt = branch --track
     branches = branch -a
     c = commit -v
+    caa = commit -v -a --amend
     co = checkout
+    cob = checkout -b
     d = diff
-    diffc = diff --cached
+    dc = diff --cached
     heads = show-ref --heads
     ld = log -p --color --graph
     lg = log --graph --pretty=format:'%Cred%h %d%Creset %s %Cblue(%ar by %an)'
