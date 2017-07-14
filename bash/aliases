@@ -15,6 +15,7 @@ alias egrep='egrep --color=auto'
 alias fgrep='fgrep --color=auto'
 
 # Handy commands
+alias timestamp='date +%s'
 alias uuid='uuidgen | tr "[:upper:]" "[:lower:]"'
 
 # Eject a device on OS X
@@ -32,4 +33,6 @@ alias stop_postgres='launchctl unload -w ~/Library/LaunchAgents/homebrew.mxcl.po
 # Docker
 alias d-c='docker-compose'
 alias dm='docker-machine'
+
+alias cx='convox'
 
