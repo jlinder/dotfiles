@@ -1,8 +1,5 @@
 export PATH=~/bin:/usr/local/bin:/usr/local/sbin:$PATH
 
-# Ruby things
-eval "$(rbenv init -)"
-
 # Python Things
 source /usr/local/bin/virtualenvwrapper.sh
 
