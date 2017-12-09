@@ -1,7 +1,4 @@
 
-# Search dash from the command line. https://kapeli.com/dash
-dash() { open dash://$1; }
-
 # Encode a key/value pair for inclusion in a URL
 urlencode() {
     python -c "import urllib; print(urllib.urlencode({'$1': '$2'}))"
