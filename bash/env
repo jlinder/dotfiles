@@ -1,6 +1,7 @@
 export PATH=~/bin:/usr/local/bin:/usr/local/sbin:$PATH
 
 # Python Things
+export WORKON_HOME=~/envs
 source /usr/local/bin/virtualenvwrapper.sh
 
 # Java Things
