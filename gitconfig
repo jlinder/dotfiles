@@ -1,41 +1,68 @@
 [user]
     name = James H. Linder
     email = git@jlinder.com
+
 [core]
     autocrlf = false
     excludesfile = ~/.gitignore_global
+    whitespace = trailing-space,cr-at-eol
+
 [color]
     ui = true
+[color "branch"]
+    current = yellow bold ul
+    local = cyan
+    remote = magenta
+[color "status"]
+    added = yellow
+    changed = green
+    untracked = magenta
+[color "diff"]
+    meta = yellow
+    frag = magenta
+    old = red
+    new = green
+    whitespace = red reverse
+
 [alias]
+    s = status -sb
+
     a = add
     ap = add -p                        # pick lines to add
+
     b = branch
     ba = branch -a
     bt = branch --track
-    branches = branch -a
+
     c = commit -v
     caa = commit -v -a --amend
     cam = commit -v --amend
     co = checkout
     cob = checkout -b
-    cot = checkout --track -b
+    remotes = remote -v
+    tags = show-ref --tags
+
     d = diff
     dc = diff --cached
     dcw = diff --cached -w
     dw = diff -w
+
     heads = show-ref --heads
+
     lbr = shortlog -sn --since='12 weeks'
-    ld = log -p --color --graph
     leaderboard = shortlog -sn
-    lg = log --graph --pretty=format:'%Cred%h %d%Creset %s %Cblue(%ar by %an)'
-    ll = log --name-status --color --graph
     overview = log --all --pretty=format:'%Cred%h %d%Creset %s %Cblue(%ar by %an)' --no-merges --since='2 weeks'
+    recap = log --all --oneline --no-merges --author=git@jlinder.com
+    recent = for-each-ref --count=10 --sort=-committerdate refs/heads/ --format="%(refname:short)"
+
+    ld = log -p --color --graph
+    lg = log --graph --pretty=format:'%C(magenta)%h %C(green)%d%Creset %s %C(blue bold dim)(%ar - %an)'
+    lga = log --graph --pretty=format:'%C(magenta)%h %C(green)%d%Creset %s %C(blue bold dim)(%ar - %an)' --branches
+    ll = log --name-status --color --graph
+
     pff = pull --ff-only
     pll = pull --rebase
-    recap = log --all --oneline --no-merges --author=james.linder@managedbyq.com
-    recent = for-each-ref --count=10 --sort=-committerdate refs/heads/ --format="%(refname:short)"
-    remotes = remote -v
+
     rollback = reset --hard HEAD~1     # erase last commit and related file edits (destructive!)
-    s = status -sb
-    tags = show-ref --tags
     uncommit = reset --soft HEAD^      # erase last commit but keeps related file edits
+    unstage = reset HEAD
