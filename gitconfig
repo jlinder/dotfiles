@@ -15,6 +15,7 @@
     branches = branch -a
     c = commit -v
     caa = commit -v -a --amend
+    cam = commit -v --amend
     co = checkout
     cob = checkout -b
     cot = checkout --track -b
