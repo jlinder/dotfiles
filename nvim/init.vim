@@ -1,5 +1,3 @@
-" .vimrc
-" James Linder
 " clear any existing autocommands
 autocmd!
 
@@ -59,8 +57,5 @@ set shortmess+=r
 "   autocmd InsertLeave * match TrailingWhitespace /\s\+$/
 "endif
 
-"call pathogen#infect()
-
 " Set the color scheme
 colorscheme darkblue
-
