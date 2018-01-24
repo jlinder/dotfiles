@@ -23,10 +23,6 @@ alias uuid='uuidgen | tr "[:upper:]" "[:lower:]"'
 # Eject a device on OS X
 alias eject='diskutil unmount'
 
-# Start/Stop postgres
-alias start_postgres='launchctl load -w ~/Library/LaunchAgents/homebrew.mxcl.postgresql.plist'
-alias stop_postgres='launchctl unload -w ~/Library/LaunchAgents/homebrew.mxcl.postgresql.plist'
-
 # Docker
 alias d-c='docker-compose'
 alias dm='docker-machine'
