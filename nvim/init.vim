@@ -1,3 +1,11 @@
+" Plugins
+call plug#begin('~/.local/share/nvim/plugged')
+Plug 'ctrlpvim/ctrlp.vim'
+Plug 'roxma/nvim-completion-manager'
+Plug 'SirVer/ultisnips'
+Plug 'honza/vim-snippets'
+call plug#end()
+
 " clear any existing autocommands
 autocmd!
 
@@ -40,6 +48,7 @@ nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
 nnoremap <C-l> <C-w>l
 
+let g:python3_host_prog="/Users/james/.pyenv/versions/neovim/bin/python"
 
 " have syntax highlighting in terminals which can display colours:
 if has('syntax') && (&t_Co > 2)
