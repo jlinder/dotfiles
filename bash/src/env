@@ -11,3 +11,5 @@ export GOROOT=/usr/local/Cellar/go/1.2/libexec
 export GOPATH=$HOME/go
 export PATH=$PATH:$GOROOT/bin:$GOPATH/bin
 
+# python things
+export PYENV_ROOT="$HOME/.pyenv"
