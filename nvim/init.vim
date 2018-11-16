@@ -1,13 +1,29 @@
-" Plugins
-call plug#begin('~/.local/share/nvim/plugged')
-Plug 'ctrlpvim/ctrlp.vim'
-Plug 'roxma/nvim-completion-manager'
-Plug 'SirVer/ultisnips'
-Plug 'honza/vim-snippets'
-call plug#end()
-
 " clear any existing autocommands
 autocmd!
+
+" Plugins
+call plug#begin('~/.local/share/nvim/plugged')
+
+Plug 'ctrlpvim/ctrlp.vim'
+
+"Plug 'roxma/nvim-completion-manager'
+"Plug 'SirVer/ultisnips'
+"Plug 'honza/vim-snippets'
+
+Plug 'w0rp/ale'
+
+Plug 'leshill/vim-json'
+Plug 'cakebaker/scss-syntax.vim'
+Plug 'pangloss/vim-javascript'
+Plug 'mxw/vim-jsx'
+
+Plug 'majutsushi/tagbar'
+
+Plug 'ajh17/Spacegray.vim'
+
+call plug#end()
+
+let mapleader = ","
 
 " Basic Settings
 set backspace=indent,eol,start  " Backspace of newlines
@@ -20,6 +36,11 @@ set list                        " Show invisible chars
 "set listchars=tab:»·,trail:·    " Show tabs and trailing whitespace only
 set listchars=tab:>-,trail:~           " Show tabs and trailing whitespace only
 set noai                        " No autoindent
+set nosmartindent
+set nocindent
+set indentexpr=
+filetype indent off
+filetype plugin indent off
 set nocompatible                " Use Vim defaults (not compatible w/ vi)
 set number                      " Display line numbers
 set ruler                       " Show the cursor position all the time
@@ -48,6 +69,16 @@ nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
 nnoremap <C-l> <C-w>l
 
+" Setting window height, witdth
+map - <C-w>-
+map + <C-w>+
+" figure these ones out. They aren't working...
+"map <M-<> <C-w><
+"map <M->> <C-w>>
+
+" Make the window take its full height/width
+map _ <C-w>_
+
 let g:python3_host_prog="/Users/james/.pyenv/versions/neovim/bin/python"
 
 " have syntax highlighting in terminals which can display colours:
@@ -67,4 +98,9 @@ set shortmess+=r
 "endif
 
 " Set the color scheme
-colorscheme darkblue
+"colorscheme darkblue
+colorscheme spacegray
+
+let g:ale_lint_on_enter = 1
+let g:ale_lint_on_save = 1
+let g:ale_lint_on_text_changed = 0
