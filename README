@@ -3,3 +3,13 @@ Run:
 ```
 ./bootstrap.sh
 ```
+
+Install nvim plugins:
+
+```
+nvim
+:PlugInstall
+:UpdateRemotePlugins
+:q!
+:q!
+```
