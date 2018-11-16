@@ -37,8 +37,8 @@ shopt -s histappend   # append to history, don't overwrite it
 
 export HISTTIMEFORMAT='%F %T ' # Set the history time format
 export HISTCONTROL=ignoreboth # don't put duplicate successive lines nor lines starting with a space in the history. See bash(1) for more options
-export HISTSIZE=100000         # save this many commands to the history file
-export HISTFILESIZE=100000     # save this many commands to the history file
+export HISTSIZE=1000000         # save this many commands to the history file
+export HISTFILESIZE=1000000     # save this many commands to the history file
 
 #export HISTIGNORE=" *:&:ls" # Set which commands are appended to the history file.
 
