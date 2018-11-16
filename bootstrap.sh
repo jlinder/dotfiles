@@ -39,14 +39,19 @@ exit 0
 
 # Run this after the rest of the script
 
-pyenv install 2.7.14
-pyenv install 3.6.4
-pyenv virtualenv 3.6.4 neovim
+pyenv install 2.7.15
+pyenv install 3.6.7
+pyenv install 3.7.1
+pyenv virtualenv 3.7.1 neovim
 
 echo neovim > python-version
 
 pip install neovim --upgrade
 
-echo 3.6.4 > python-version
+echo 3.6.7 > python-version
+
+pip install ipython
+
+echo 3.7.1 > python-version
 
 pip install ipython
