@@ -16,6 +16,7 @@ ln -s ~/dotfiles/python-version     ~/.python-verison
 
 brew install \
     bash-completion \
+    ctags \
     docker-clean \
     git \
     libpng \
@@ -27,7 +28,8 @@ brew install \
     pyenv \
     pyenv-virtualenv \
     readline \
-    ruby
+    ruby \
+    watch
 
 # install vim-plug
 curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
