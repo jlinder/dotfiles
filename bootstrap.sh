@@ -10,6 +10,7 @@ ln -s ~/dotfiles/gitconfig          ~/.gitconfig
 ln -s ~/dotfiles/gitignore_global   ~/.gitignore_global
 ln -s ~/dotfiles/inputrc            ~/.inputrc
 ln -s ~/dotfiles/python-version     ~/.python-verison
+ln -s ~/dotfiles/zshrc              ~/.zshrc
 
 # install brew
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
@@ -30,7 +31,9 @@ brew install \
     readline \
     ruby \
     watch \
-    wget
+    wget \
+    zsh \
+    zsh-completions
 
 # install vim-plug
 curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
