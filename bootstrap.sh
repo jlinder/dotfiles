@@ -30,6 +30,7 @@ brew install \
     pyenv-virtualenv \
     readline \
     ruby \
+    tree \
     watch \
     wget \
     zsh \
