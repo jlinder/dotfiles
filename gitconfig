@@ -49,6 +49,8 @@
 
     heads = show-ref --heads
 
+    fo = fetch --prune origin
+
     lbr = shortlog -sn --since='12 weeks'
     leaderboard = shortlog -sn
     overview = log --all --pretty=format:'%Cred%h %d%Creset %s %Cblue(%ar by %an)' --no-merges --since='2 weeks'
@@ -61,6 +63,7 @@
     ll = log --name-status --color --graph
 
     pff = pull --ff-only
+    pfom = pull --ff-only origin master
     pll = pull --rebase
 
     rollback = reset --hard HEAD~1     # erase last commit and related file edits (destructive!)
