@@ -19,6 +19,8 @@ Plug 'mxw/vim-jsx'
 
 Plug 'majutsushi/tagbar'
 
+Plug 'nvie/vim-flake8'
+
 Plug 'ajh17/Spacegray.vim'
 
 call plug#end()
