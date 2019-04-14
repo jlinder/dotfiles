@@ -9,37 +9,16 @@ ln -s ~/dotfiles/bash/bashrc        ~/.bashrc
 ln -s ~/dotfiles/gitconfig          ~/.gitconfig
 ln -s ~/dotfiles/gitignore_global   ~/.gitignore_global
 ln -s ~/dotfiles/inputrc            ~/.inputrc
-ln -s ~/dotfiles/python-version     ~/.python-verison
 ln -s ~/dotfiles/zshrc              ~/.zshrc
 
 # install brew
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 
-brew install \
-    bash-completion \
-    ctags \
-    docker-clean \
-    git \
-    libpng \
-    libyaml \
-    jq \
-    neovim \
-    node \
-    openssl \
-    pyenv \
-    pyenv-virtualenv \
-    readline \
-    ruby \
-    tree \
-    watch \
-    wget \
-    zsh \
-    zsh-completions
+# install brewfile dependencies
+brew bundle install
 
 # install vim-plug
 curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-
-exit 0
 
 # Run this after the rest of the script
 
@@ -47,15 +26,12 @@ pyenv install 2.7.15
 pyenv install 3.6.7
 pyenv install 3.7.1
 pyenv virtualenv 3.7.1 neovim
+pyenv global 3.7.1
 
-echo neovim > python-version
+PYENV_VERSION=neovim pip install pip --upgrade
+PYENV_VERSION=3.6.7 pip install pip --upgrade
+PYENV_VERSION=3.7.1 pip install pip --upgrade
 
-pip install neovim --upgrade
-
-echo 3.6.7 > python-version
-
-pip install ipython
-
-echo 3.7.1 > python-version
-
-pip install ipython
+PYENV_VERSION=neovim pip install neovim --upgrade
+PYENV_VERSION=3.6.7 pip install ipython
+PYENV_VERSION=3.7.1 pip install ipython
