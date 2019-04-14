@@ -1,15 +1,33 @@
-Run:
 
-```
-./bootstrap.sh
-```
+My dotfiles setup steps
+=======================
 
-Install nvim plugins:
+1. Clone the repo to `~/dotfiles`
 
-```
-nvim
-:PlugInstall
-:UpdateRemotePlugins
-:q!
-:q!
-```
+1. Run the bootstrap
+
+    ```
+    ./bootstrap.sh
+    ```
+
+1. Install nvim plugins
+
+    ```
+    nvim
+    :PlugInstall
+    :UpdateRemotePlugins
+    :q!
+    :q!
+    ```
+
+1. If needed, setup a new ssh key for pushing / pulling my dotfiles repo
+
+    ```
+    mkdir .ssh
+    chmod go-rwx .ssh
+
+    # Create a new key in the ~/dotfiles/.ssh directory
+    ssh-keygen
+
+    git config core.sshCommand "ssh -i ~/dotfiles/.ssh/id_rsa -F /dev/null"
+    ```
