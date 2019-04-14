@@ -65,6 +65,10 @@ set whichwrap=h,l,~,[,]
 " already done by yy):
 noremap Y y$
 
+" Make up/down go by screen line for wrapped lines (vs. physical lines)
+noremap j gj
+noremap k gk
+
 " Make it easier to switch between windows
 nnoremap <C-h> <C-w>h
 nnoremap <C-j> <C-w>j
