@@ -35,6 +35,7 @@
     bt = branch --track
 
     c = commit -v
+    ca = commit -v -a
     caa = commit -v -a --amend
     cam = commit -v --amend
     co = checkout
