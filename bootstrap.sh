@@ -1,6 +1,8 @@
 #!/bin/bash
 
-mkdir ~/.config
+mkdir -p ~/.config
+
+rm ~/.config/nvim ~/.bash_profile ~/.bashrc ~/.gitconfig ~/.gitignore_global ~/.inputrc ~/.zshrc
 
 ln -s ~/dotfiles/nvim               ~/.config/nvim
 
@@ -13,6 +15,8 @@ ln -s ~/dotfiles/zshrc              ~/.zshrc
 
 # install brew
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+
+brew update
 
 # install brewfile dependencies
 brew bundle install
