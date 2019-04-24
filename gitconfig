@@ -63,6 +63,7 @@
     lga = log --graph --pretty=format:'%C(magenta)%h %C(green)%d%Creset %s %C(blue bold dim)(%ar - %an)' --branches
     ll = log --name-status --color --graph
 
+    pf = push --force-with-lease
     pff = pull --ff-only
     pfom = pull --ff-only origin master
     pll = pull --rebase
