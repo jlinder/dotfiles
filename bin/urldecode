@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+
+# Decode a url-encoded value
+
+python -c "import urllib.parse; print(urllib.parse.unquote('$1'))"

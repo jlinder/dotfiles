@@ -1,4 +1,4 @@
-export PATH=~/bin:/usr/local/bin:/usr/local/sbin:$PATH
+export PATH=~/bin:~/dotfiles/bin:/usr/local/bin:/usr/local/sbin:$PATH
 
 # Java Things
 export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.7.0_21.jdk/Contents/Home/

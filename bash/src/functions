@@ -1,15 +1,3 @@
-
-# Encode a key/value pair for inclusion in a URL
-urlencode() {
-    python -c "import urllib.parse; print(urllib.parse.urlencode({'$1': '$2'}))"
-}
-
-# Decode a url-encoded value
-urldecode() {
-    python -c "import urllib.parse; print(urllib.parse.unquote('$1'))"
-}
-
-
 # Most-used commands in history
 hits() { history | perl -F"\||<\(|;|\`|\\$\(" -alne 'foreach (@F) { print $1 if /\b((?!do)[a-z]+)\b/i }' | sort | uniq -c | sort -nr | head; }
 
