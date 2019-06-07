@@ -1,8 +1,8 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 mkdir -p ~/.config
 
-rm ~/.config/nvim ~/.bash_profile ~/.bashrc ~/.gitconfig ~/.gitignore_global ~/.inputrc ~/.zshrc
+unlink ~/.config/nvim ~/.bash_profile ~/.bashrc ~/.gitconfig ~/.gitignore_global ~/.inputrc ~/.zshrc
 
 ln -s ~/dotfiles/nvim               ~/.config/nvim
 
