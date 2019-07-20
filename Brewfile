@@ -37,6 +37,7 @@ brew "notmuch"
 # handy cli tools
 brew "jq"
 brew "pstree"
+brew "ripgrep"
 brew "tmux"
 brew "tree"
 brew "watch"
