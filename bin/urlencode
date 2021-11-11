@@ -2,4 +2,4 @@
 
 # Encode a key/value pair for inclusion in a URL
 
-python -c "import urllib.parse; print(urllib.parse.urlencode({'$1': '$2'}))"
+python -c "import urllib.parse; print(urllib.parse.urlencode({'$1': '$2'})[1:])"
