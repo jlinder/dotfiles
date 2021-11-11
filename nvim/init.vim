@@ -1,7 +1,7 @@
 " clear any existing autocommands
 autocmd!
 
-" Plugins
+" Plugins using junegunn/vim-plug
 call plug#begin('~/.local/share/nvim/plugged')
 
 Plug 'ctrlpvim/ctrlp.vim'
@@ -23,6 +23,9 @@ Plug 'nvie/vim-flake8'
 
 Plug 'ajh17/Spacegray.vim'
 
+Plug 'fatih/vim-go'
+Plug 'vim-syntastic/syntastic'
+
 call plug#end()
 
 let mapleader = ","
@@ -41,8 +44,9 @@ set noai                        " No autoindent
 set nosmartindent
 set nocindent
 set indentexpr=
-filetype indent off
-filetype plugin indent off
+filetype plugin on
+"filetype indent off
+"filetype plugin indent off
 set nocompatible                " Use Vim defaults (not compatible w/ vi)
 set number                      " Display line numbers
 set ruler                       " Show the cursor position all the time
@@ -110,3 +114,13 @@ colorscheme spacegray
 let g:ale_lint_on_enter = 1
 let g:ale_lint_on_save = 1
 let g:ale_lint_on_text_changed = 0
+
+" Configure syntastic
+"set statusline+=%#warningmsg#
+"set statusline+=%{SyntasticStatuslineFlag()}
+"set statusline+=%*
+
+let g:syntastic_always_populate_loc_list = 1
+"let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
