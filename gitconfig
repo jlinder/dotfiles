@@ -76,6 +76,20 @@
     rollback = reset --hard HEAD~1     # erase last commit and related file edits (destructive!)
     uncommit = reset --soft HEAD^      # erase last commit but keeps related file edits
     unstage = reset HEAD
+
+[pager]
+    diff = delta
+    log = delta
+    reflog = delta
+    show = delta
+
+[interactive]
+    diffFilter = delta --color-only
+
+[delta]
+    syntax-theme = gruvbox-dark
+    #syntax-theme = zenburn
+
 [url "git@github.com:"]
 	insteadOf = https://github.com/
 [pull]
