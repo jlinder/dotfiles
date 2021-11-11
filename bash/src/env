@@ -1,15 +1,33 @@
-export PATH=~/bin:~/dotfiles/bin:/usr/local/bin:/usr/local/sbin:$PATH
 
 # Java Things
-export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.7.0_21.jdk/Contents/Home/
+#export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.7.0_21.jdk/Contents/Home/
+export PATH="/usr/local/opt/openjdk/bin:$PATH"
 
 # NPM Things
-export PATH=$PATH:/usr/local/share/npm/bin
+export PATH="$PATH:/usr/local/share/npm/bin"
 
 # go things
-export GOROOT=/usr/local/Cellar/go/1.2/libexec
+export GOROOT="$(brew --prefix go)/libexec"
+#export GOROOT="$(brew --prefix go@1.15)/libexec"
+#export GOROOT=/usr/local/opt/go/libexec
 export GOPATH=$HOME/go
-export PATH=$PATH:$GOROOT/bin:$GOPATH/bin
+export PATH="$PATH:$GOROOT/bin:$GOPATH/bin"
+
+# node things
+#export PATH="/usr/local/opt/node@10/bin:$PATH"
 
 # python things
 export PYENV_ROOT="$HOME/.pyenv"
+export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init --path)"
+
+# ruby things
+#export PATH=/usr/local/opt/ruby/bin:$PATH
+export RUBY_CONFIGURE_OPTS="--with-openssl-dir=$(brew --prefix openssl@1.1)"
+eval "$(rbenv init -)"
+
+# Put make on the path
+export PATH="/usr/local/opt/make/libexec/gnubin:$PATH"
+
+# My path update
+export PATH="~/bin:~/dotfiles/bin:/usr/local/bin:/usr/local/sbin:$PATH"
