@@ -1,6 +1,9 @@
 # shell-related
+brew "autojump"
 brew "bash"
 brew "bash-completion"
+brew "bat"
+brew "direnv"
 brew "pinentry"
 brew "shellcheck"
 brew "zsh"
