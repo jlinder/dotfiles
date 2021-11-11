@@ -40,6 +40,8 @@
     cam = commit -v --amend
     co = checkout
     cob = checkout -b
+    # Use cot like: git cot origin/BRANCH_NAME
+    cot = checkout --track
     remotes = remote -v
     tags = show-ref --tags
 
@@ -50,6 +52,7 @@
 
     heads = show-ref --heads
 
+    f = fetch --prune
     fo = fetch --prune origin
 
     lbr = shortlog -sn --since='12 weeks'
@@ -66,8 +69,14 @@
     pf = push --force-with-lease
     pff = pull --ff-only
     pfom = pull --ff-only origin master
+    pfomain = pull --ff-only origin main
     pll = pull --rebase
+    pt = !git tag -l | xargs git tag -d && git fetch -t   # prune tags
 
     rollback = reset --hard HEAD~1     # erase last commit and related file edits (destructive!)
     uncommit = reset --soft HEAD^      # erase last commit but keeps related file edits
     unstage = reset HEAD
+[url "git@github.com:"]
+	insteadOf = https://github.com/
+[pull]
+	ff = only
