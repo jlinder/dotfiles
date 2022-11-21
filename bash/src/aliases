@@ -17,6 +17,8 @@ alias fgrep='fgrep --color=auto'
 alias vi='nvim'
 alias vim='nvim'
 
+alias ff='/Applications/Firefox.app/Contents/MacOS/firefox-bin -P'
+
 # Handy commands
 alias timestamp='date +%s'
 alias uuid='uuidgen | tr "[:upper:]" "[:lower:]"'
