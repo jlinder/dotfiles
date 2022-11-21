@@ -27,6 +27,7 @@ brew "ctags"
 brew "dive"
 brew "docker-clean"
 brew "git"
+brew "git-delta"
 
 # encryption-related
 brew "gnupg"
@@ -40,6 +41,7 @@ brew "neomutt"
 brew "notmuch"
 
 # handy cli tools
+brew "bottom"
 brew "jq"
 brew "pstree"
 brew "ripgrep"
@@ -57,4 +59,8 @@ brew "libpng"
 brew "libyaml"
 brew "readline"
 brew "zlib"
+
+# for astronvim
+brew "gdu"
+brew "lazygit"
 
