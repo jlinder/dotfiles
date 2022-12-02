@@ -23,6 +23,9 @@ alias ff='/Applications/Firefox.app/Contents/MacOS/firefox-bin -P'
 alias timestamp='date +%s'
 alias uuid='uuidgen | tr "[:upper:]" "[:lower:]"'
 
+# github shorts
+alias ghro='gh repo view --web'
+
 # Eject a device on OS X
 alias eject='diskutil unmount'
 
