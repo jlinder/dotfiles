@@ -28,18 +28,18 @@ brew bundle install
 # Run this after the rest of the script
 
 pyenv install 2.7.15
-pyenv install 3.6.7
-pyenv install 3.7.3
-pyenv virtualenv 3.7.3 neovim
-pyenv global 3.7.3
+pyenv install 3.10.9
+pyenv install 3.11.1
+pyenv virtualenv 3.10.9 neovim
+pyenv global 3.10.9
 
 PYENV_VERSION=neovim pip install pip --upgrade
-PYENV_VERSION=3.6.7 pip install pip --upgrade
-PYENV_VERSION=3.7.3 pip install pip --upgrade
+PYENV_VERSION=3.10.9 pip install pip --upgrade
+PYENV_VERSION=3.11.1 pip install pip --upgrade
 
 PYENV_VERSION=neovim pip install neovim --upgrade
-PYENV_VERSION=3.6.7 pip install ipython
-PYENV_VERSION=3.7.3 pip install ipython
+PYENV_VERSION=3.10.9 pip install ipython
+PYENV_VERSION=3.11.1 pip install ipython
 
 # Install AstroNvim
 git clone https://github.com/AstroNvim/AstroNvim ~/.config/nvim
