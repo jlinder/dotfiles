@@ -42,7 +42,7 @@ export HISTFILESIZE=1000000     # save this many commands to the history file
 
 #export HISTIGNORE=" *:&:ls" # Set which commands are appended to the history file.
 
-export EDITOR=/usr/local/bin/nvim
+export EDITOR=/opt/homebrew/bin/nvim
 
 # disable the TTY driver from stopping the ctrl-s keystroke.
 stty stop ''

@@ -15,11 +15,14 @@ brew "zsh-completions"
 brew "neovim"
 
 # programming language-related
+brew "go"
+brew "go@1.18"
 brew "node"
+brew "openjdk"
 brew "pyenv"
 brew "pyenv-virtualenv"
 brew "python"
-brew "ruby"
+brew "rbenv"
 
 # programming and ops tools
 brew "awscli"
