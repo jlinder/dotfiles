@@ -1,6 +1,6 @@
 # Homebrew configuration
-eval "$(/opt/homebrew/bin/brew shellenv)"
-$(/opt/homebrew/bin/brew shellenv)
+eval "$(/usr/local/bin/brew shellenv)"
+$(/usr/local/bin/brew shellenv)
 
 # Java Things
 #export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.7.0_21.jdk/Contents/Home/
